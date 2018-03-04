@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+<script>
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+<style>
+body {
+  background-image: url("/static/img/more_opaque.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+.card {
+  background-color: #262525;
+  opacity: 0.9;
+}
+
+.card-img-top {
+  padding-top: 20px;
+  height: 160px;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.card-title {
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  font-size: 60px;
+  color: #e5e6e8;
+
+}
+.card-text {
+  font-family: 'Gudea', sans-serif;
+  font-size: 14px;
+  color: #e5e6e8;
+}
+
+#nav-buttons {
+  width:100%;
+  text-align: center;
+}
+.nav-link-info {
+  display: inline-block;
+  font-size: 15px;
+}
+
+#est-text {
+  padding-bottom: 9px;
+}
+
+#login-btn {
+  font-family: 'Gudea', sans-serif;
+}
+
+
+
+
+</style>
+
+<div class="container-fluid" id="card-container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem; height:50rem;">
+      <center><img class="card-img-top" src="/static/img/logos/mit_beaver.jpg" alt="Card image cap"></center>
+      <div class="card-body">
+        <center><h5 class="card-title">MITRC</h5></center>
+        <center><p class="card-text">The MIT Rowing Club</p></center>
+        <center><p class="card-text" id="est-text">Est. 1905</p></center>
+        <center><a href="/login" id="login-btn" class="btn btn-outline-light inline">Login</a></center>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <center><h5 class="card-title">Wanna join?</h5></center>
+        <center><p class="card-text"> We're currently recruiting rowers and coxswains for <bold>Spring 2018</bold>!</p></center>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>
+
+<!--- End Card --->
+
+
+{% endblock %}
+</body>
+</html>
